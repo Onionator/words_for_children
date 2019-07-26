@@ -22,7 +22,7 @@ This program allows a user to create and define words.
 
 ## Setup/Installation Requirements
 
-* Go to website and enjoy
+* Go to https://aqueous-brushlands-71719.herokuapp.com/
 
 
 ## Known Bugs

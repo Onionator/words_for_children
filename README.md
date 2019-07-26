@@ -38,8 +38,9 @@ If you encounter any issues using this software, have comments or suggestions, o
 
 ## Technologies Used
 
-* ruby
-* heroku
+* Ruby
+* HTML
+* Heroku
 
 ### License
 

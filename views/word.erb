@@ -1,0 +1,13 @@
+<h1> <%= @word.word %> </h1>
+<div class="">
+  <ol>
+    <% @definitions.each do |definition| %>
+      <li> <%= @definitions.definition %> </li>
+    <% end %>
+  </ol>
+</div>
+<form action="/word/definition/new" method="post">
+  <textarea id="new_definition" name="name" rows="8" cols="80"></textarea>
+  <button type="submit" name="button">Add Definition</button>
+</form>
+<a href="/">Return to Home Page</a>

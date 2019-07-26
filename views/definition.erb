@@ -1,3 +1,8 @@
+<head>
+  <title>Definition</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+<body class="container">
 <h1> <%= @word.word %> </h1>
 <ul>
   <li> <%= @definition.definition %> <form action="/word/<%= @word.word_id %>/remove_definition/<%= @definition.definition_id %>" method="post">
@@ -11,3 +16,4 @@
 <form class="" action="/" method="get">
   <button type="submit" name="button">cancel</button>
 </form>
+</body>

@@ -2,8 +2,8 @@
 <div class="">
   <ol>
     <% @definitions.each do |definition| %>
-      <li> <%= definition.definition %> <form action="/word/<%= @word.word_id %>/remove_definition/<%= definition.definition_id %>" method="post">
-        <button type="submit" name="button">Remove</button>
+      <li> <%= definition.definition %> <form action="/word/<%= @word.word_id %>/update_definition/<%= definition.definition_id %>" method="get">
+        <button type="submit" name="button">Edit</button>
       </form></li>
     <% end %>
   </ol>

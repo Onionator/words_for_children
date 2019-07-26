@@ -11,8 +11,8 @@ get '/' do
 end
 
 get '/word/:word_id' do
-  @word = Word.find(params[:word_id].to_i)
   @definitions = Definition.find_by_word(params[:word_id].to_i)
+  @word = Word.find(params[:word_id].to_i)
   erb(:word)
 end
 
@@ -34,6 +34,19 @@ end
 
 post '/word/:word_id/remove_definition/:definition_id' do
   Definition.remove(params[:definition_id].to_i)
+  @definitions = Definition.find_by_word(params[:word_id].to_i)
+  @word = Word.find(params[:word_id].to_i)
+  erb(:word)
+end
+
+get '/word/:word_id/update_definition/:definition_id' do
+  @definition = Definition.find(params[:definition_id].to_i)
+  @word = Word.find(params[:word_id].to_i)
+  erb(:definition)
+end
+
+post '/word/:word_id/update_definition/:definition_id' do
+  Definition.update(params[:definition_id].to_i, params[:new_definition])
   @definitions = Definition.find_by_word(params[:word_id].to_i)
   @word = Word.find(params[:word_id].to_i)
   erb(:word)

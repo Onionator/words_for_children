@@ -26,7 +26,10 @@ class Definition
     definitions
   end
   def self.remove(id)
-    @@definitions.delete(id) 
+    @@definitions.delete(id)
+  end
+  def self.update(id, new_definition)
+    @@definitions[id].definition = new_definition
   end
   def save
     @@definitions[self.definition_id] = self

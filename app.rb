@@ -12,7 +12,7 @@ end
 
 get '/word/:word_id' do
   @word = Word.find(params[:word_id].to_i)
-  @definitions = Definition.find_by_word(:word_id)
+  @definitions = Definition.find_by_word(params[:word_id].to_i)
   erb(:word)
 end
 
@@ -25,9 +25,8 @@ post '/new_word' do
   redirect to('/')
 end
 
-post '/word/definition/new' do
-  temp = Definition.new({:definition => params[:new_definition], :word_id => params[:word_id]})
+post '/word/define/:word_id' do
+  temp = Definition.new({:definition => params[:new_definition], :word_id => params[:word_id].to_i})
   temp.save
-  binding.pry
   redirect to('/')
 end

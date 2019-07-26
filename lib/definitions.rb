@@ -21,7 +21,6 @@ class Definition
     @@definitions.values.each do |definition|
       if definition.word_id == word_id
         definitions.push(definition)
-        binding.pry
       end
     end
     definitions

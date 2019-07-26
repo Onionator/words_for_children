@@ -2,7 +2,7 @@
 <p>Click on a word to see its definitions and add new ones.</p>
 <div class="">
   <% @words.each do |word| %>
-    <li><a href="/word/ <%= word.word_id %> " > <%= word.word %> </a></li>
+    <li><a href="/word/<%= word.word_id %>" > <%= word.word %> </a></li>
   <% end %>
 </div>
 <a href="/new_word">Add a new word</a>

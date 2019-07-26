@@ -5,7 +5,7 @@
 <body class="container">
 <h1>Words and Definitions</h1>
 <p>Click on a word to see its definitions and add new ones.</p>
-<div class="">
+<div>
   <% @words.each do |word| %>
     <li><a href="/word/<%= word.word_id %>" > <%= word.word %> </a></li>
   <% end %>

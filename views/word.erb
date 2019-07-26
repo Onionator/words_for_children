@@ -4,7 +4,7 @@
 </head>
 <body class="container">
 <h1> <%= @word.word %> </h1>
-<div class="">
+<div>
   <ol>
     <% @definitions.each do |definition| %>
       <li> <%= definition.definition %> <form action="/word/<%= @word.word_id %>/update_definition/<%= definition.definition_id %>" method="get">

@@ -25,6 +25,9 @@ class Definition
     end
     definitions
   end
+  def self.remove(id)
+    @@definitions.delete(id) 
+  end
   def save
     @@definitions[self.definition_id] = self
   end

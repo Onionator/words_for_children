@@ -2,11 +2,13 @@
 <div class="">
   <ol>
     <% @definitions.each do |definition| %>
-      <li> <%= definition.definition %> </li>
+      <li> <%= definition.definition %> <form action="/word/<%= @word.word_id %>/remove_definition/<%= definition.definition_id %>" method="post">
+        <button type="submit" name="button">Remove</button>
+      </form></li>
     <% end %>
   </ol>
 </div>
-<form action="/word/define/<%= @word.word_id %>" method="post">
+<form action="/word/<%= @word.word_id %>/define" method="post">
   <textarea name="new_definition" rows="8" cols="80"></textarea>
   <button type="submit" name="button">Add Definition</button>
 </form>
